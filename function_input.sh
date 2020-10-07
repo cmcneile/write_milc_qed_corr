@@ -119,6 +119,7 @@ function build_dummy_prop () {
 
 nprop=$1
 source=$2
+charge=$3
 
 cat <<EOF
 
@@ -157,6 +158,7 @@ nprop=$1
 source=$2
 mass=$3
 err=$4
+charge=$5
 
 cat <<EOF
 
@@ -192,12 +194,13 @@ function build_real_props(){
 nprev=$1
 mass=$2
 err=$3
+charge=$4
 
-build_prop $[${nprev}+0] 1 ${mass} ${err} 
-build_prop $[${nprev}+1] 2 ${mass} ${err} 
-build_prop $[${nprev}+2] 3 ${mass} ${err} 
-build_prop $[${nprev}+3] 4 ${mass} ${err} 
-build_prop $[${nprev}+4] 5 ${mass} ${err} 
+build_prop $[${nprev}+0] 1 ${mass} ${err} ${charge}
+build_prop $[${nprev}+1] 2 ${mass} ${err} ${charge}
+build_prop $[${nprev}+2] 3 ${mass} ${err} ${charge}
+build_prop $[${nprev}+3] 4 ${mass} ${err} ${charge}
+build_prop $[${nprev}+4] 5 ${mass} ${err} ${charge}
 
 }
 
@@ -489,10 +492,10 @@ cat <<EOF
 number_of_sets $[1+3*5]
 EOF
 
-build_dummy_prop 0 0
-build_real_props 1 ${m_up} ${err}
-build_real_props 6 ${m_down} ${err}
-build_real_props 11 ${m_strange} ${err}
+build_dummy_prop 0 0 ${charge_dummy}
+build_real_props 1 ${m_up} ${err}  ${charge_up}
+build_real_props 6 ${m_down} ${err} ${charge_down}
+build_real_props 11 ${m_strange} ${err} ${charge_strange}
 
 cat <<EOF
 # Description of quarks

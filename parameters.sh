@@ -29,7 +29,7 @@ t0sep=1
 r0=2.5
 source_iters=20
 
-charge=-0.1
+
 
 max_cg=1000
 max_restarts=5
@@ -42,6 +42,7 @@ ks_error_loose=1e-5
 ks_error_fine=1e-9
 
 ##err=1e-5
+charge_dummy=0.0
 
 m_up=0.001524
 charge_up=-.2
