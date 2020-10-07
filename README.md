@@ -1,1 +1,3 @@
-# write_milc_qed_corr
+Top level scripts to write correltors for the MILC code
+
+
