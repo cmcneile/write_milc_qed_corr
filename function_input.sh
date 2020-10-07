@@ -492,7 +492,7 @@ EOF
 build_dummy_prop 0 0
 build_real_props 1 ${m_up} ${err}
 build_real_props 6 ${m_down} ${err}
-build_real_props 11 ${m_light} ${err}
+build_real_props 11 ${m_strange} ${err}
 
 cat <<EOF
 # Description of quarks

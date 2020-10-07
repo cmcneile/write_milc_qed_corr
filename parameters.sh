@@ -44,8 +44,12 @@ ks_error_fine=1e-9
 ##err=1e-5
 
 m_up=0.001524
-m_down=0.003328
-m_light=0.0673
+charge_up=-.2
 
+m_down=0.003328
+charge_down=-0.1 
+
+m_strange=0.0673
+charge_strange=-0.1
 
 
